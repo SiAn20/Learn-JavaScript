@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+
+
+    <h2>Ciclo While html</h2>
+    <p id="while"></p>
+    <script>
+        let texto = "";
+        let i = 0;
+        while (i<10) {
+            texto += "<br>El número while es: " + i;
+            i++
+        }
+        document.getElementById("while").innerHTML = texto;
+    </script>
+
+
+    <h2>Ciclo Do While html</h2>
+    <p id="doWhile"></p>
+    <script>
+        let texto2 = "";
+        let i2 = 0;
+        do {
+            texto2 += "<br>El número do While es: " + i2;
+            i2++
+        }while (i2<9)
+        document.getElementById("doWhile").innerHTML = texto2;
+    </script>
+
+
+    <h2>Ciclo For html</h2>
+    <p id="for"></p>
+    <script>
+        let texto3 = "";
+        for (let contador = 0; contador<8; contador++) {
+            texto3 += "<br>El número for es: " + contador;
+        }
+        document.getElementById("for").innerHTML = texto3;
+    </script>
+
+
+    <h2>Ciclo for con sentencia break html</h2>
+    <p id="forBreak"></p>
+    <script>
+        let texto4 = "";
+        for (let contador2 = 0; contador2<7; contador2++) {
+            if (contador2%2 === 0){
+                texto4 += "<br>El número for es: " + contador2;
+            }
+        }
+        document.getElementById("forBreak").innerHTML = texto4;
+    </script>
+
+
+</body>
+</html>
