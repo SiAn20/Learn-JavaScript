@@ -31,11 +31,13 @@
     //console.log(typeof x);
 
 
+
 //saber los tipos de datos
     var tipo = "primero cadena";
     //console.log(typeof tipo);
     tipo = 20012005;
     //console.log(typeof tipo);
+
 
 
 //Arrays
@@ -44,6 +46,7 @@
     //console.log(typeof pelicula);//object
 
 
+    
 //Uso de lef const
     let sid = "variable"
     //console.log(sid);
