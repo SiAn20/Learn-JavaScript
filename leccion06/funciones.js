@@ -6,12 +6,14 @@ suma(1,2)
 
 
 
+
 //Uso del return
 function resta (c,d) {
     return (c-d);
 }
 let resultadoResta = resta(3,4);
 alert("la resta es:  " + resultadoResta);
+
 
 
 
@@ -22,10 +24,12 @@ alert("la division es:  " + resultadoDivision);
 
 
 
+
 //Funciones self invoking, funcion que se llama a si misma
 (function (g,h){
     alert("la multiplicación es:  " + (g*h));
 })(5,6)
+
 
 
 

@@ -17,7 +17,6 @@ let persona = {
         return this.nombre + " " + this.apellido;
     }
 }
-
 console.log(persona.lang);
 persona.lang = "Ingles";
 console.log(persona.lang);
@@ -25,4 +24,4 @@ console.log(persona.lang);
 
 
 
-//
+//Metodo constructor, 
