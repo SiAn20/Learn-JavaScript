@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM</title>
+</head>
+<body>
+
+
+    <h1 id="titulo">Titulo de manipulacion DOM</h1>
+    <p id="parrafo0">parrafo inicial 1</p>
+    <p id="parrafo1">parrafo 1</p>
+    <p class="parrafo2">parrafo 2</p>
+    <p class="parrafo2">parrafo 3</p>
+    <h2 class="titulo2">titulo 2</h2>
+    <h2 class="titulo2">titulo 3</h2>
+
+    <script>
+
+        let recuperar_contenido_id = document.getElementById("titulo").innerHTML;
+        console.log(recuperar_contenido_id);
+
+
+        let cambiar_contenido = document.getElementById("parrafo0");
+        cambiar_contenido.innerHTML = "parrafo final despues de cambio 2"
+
+
+        let recuperar_contenido_etiqueta = document.getElementsByTagName("p");
+        for (let i = 0; i < recuperar_contenido_etiqueta.length; i++) {
+            console.log(recuperar_contenido_etiqueta[i].innerHTML);
+        }
+
+
+        let recuperar_contenido_clase = document.getElementsByClassName("parrafo2");
+        for (let j = 0; j < recuperar_contenido_clase.length; j++) {
+            console.log(recuperar_contenido_clase[j].innerHTML);            
+        }
+
+
+        let recuperar_contenido_etiquetaClase = document.querySelectorAll("h2.titulo2");
+        for (let k = 0; k < recuperar_contenido_etiquetaClase.length; k++) {
+            console.log(recuperar_contenido_etiquetaClase[k].innerHTML);            
+        }
+
+    </script>
+    
+
+</body>
+</html>

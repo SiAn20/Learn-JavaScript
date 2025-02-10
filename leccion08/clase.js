@@ -1,5 +1,8 @@
-//Clases con set y get
+//Clases con set y get, Palabra reservada static, atributos static y no static
 class persona {
+    static estatico = "dato estatico, se llama con la clase";
+    normal = "dato normal, se llama desde objeto instanciado";
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
@@ -18,6 +21,9 @@ class persona {
     }
     nombreCompleto(){
         return this._nombre + " " + this._apellido;
+    }
+    static metodo_static (objeto_persona){
+        console.log("llamando al metodo estatico " + objeto_persona.nombre)
     }
 }
 let persona1 = new persona("Sidney","Sahonero");
@@ -49,4 +55,7 @@ console.log(persona2.nombreCompleto());
 
 
 
-//
+// llamando variables estaticas y normales. llamando metodo statico
+console.log(persona.estatico);
+console.log(persona2.normal);
+console.log(persona.metodo_static(persona1));
