@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Eventos</title>
+</head>
+<body onload="myFunction()">
+    
+
+    <h1 onclick="myOnclick(this)">Titulo de evento onclick</h1>
+    <div id="div1"></div>
+    <input type="text" onchange="myOnchange(this)">
+
+
+    <script>
+        //ONCLICK lo que pasara cuando haga click sobre el elemento
+        function myOnclick (titulo){
+            titulo.innerHTML = "Titulo despues de onclick";
+        }
+
+        //ONLOAD lo que pasara al iniciar la pagina
+        function myFunction (){
+            alert ("inicializo la pagina!!!");
+            if (navigator.cookieEnabled) {
+                texto = "se aplico el evento onload, las cookies estan activadas";
+            } else {
+                texto = "No se aplico el evento onload, las cookies estan desactivadas";
+            }
+            document.getElementById("div1").innerHTML = texto;
+        }
+
+        //ONCHANGE lo que pasara si hay un clambio sobre el elemento
+        function myOnchange (input){
+            input.value = input.value.toUpperCase();
+        }
+    </script>
+
+
+</body>
+</html>

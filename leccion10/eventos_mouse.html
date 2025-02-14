@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos mouse</title>
+</head>
+<body>
+    
+
+    <h1 id="titulo1" onmouseover="overBlue()" onmouseout="outGreen()">Titulo para eventos onmouseover y onmouseout</h1>
+    <h1 onmousedown="downCyan(this)" onmouseup="upRed(this)">Titulo para eventos onmousedown y onmouseup</h1>
+    <input type="text" onfocus="focusYellow(this)" onblur="blurBlack(this)">
+    <input id="input2" type="text">
+
+
+    <script>
+        //ONMOUSEOVER  evento, cuando el mouse ya no este sobre el elemento
+        function overBlue(){
+            document.getElementById("titulo1").style.color = "blue";
+        }
+
+        //ONMOUSEOUT  evento, cuando el mouse este sobre el elemento
+        function outGreen(){
+            document.getElementById("titulo1").style.color = "green";
+        }
+
+        //ONMOUSEDOWN  cuando presiono (sin soltar) el elemento
+        function downCyan(titulo){
+            titulo.style.color = "cyan";
+        }
+
+        //ONMOUSEUP  cuando deje de presionar el elemento
+        function upRed(titulo){
+            titulo.style.color = "Red";
+        }    
+
+        //ONFOCUS  cuando estoy sobre el elemento
+        function focusYellow(input){
+            input.style.background = "yellow";
+        }
+
+        //ONBLUR  cuando sali del elemento y estoy en cualquier otro lugar
+        function blurBlack(input){
+            input.style.background = "black";
+        }
+        
+        //ADDEVENTLISTENER  para manejar varios eventos
+        document.getElementById("input2").addEventListener("focus",cambiar);
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = "blue";
+        }
+        document.getElementById("input2").addEventListener("blur",(evento)=>{
+            evento.target.style.background = "green";
+        });
+    </script>
+
+
+</body>
+</html>

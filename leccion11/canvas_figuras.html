@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Figuras</title>
+
+
+    <style>
+        canvas { 
+            background-color: darkblue;
+            border: solid 3px;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            let canva = document.getElementById("canva");
+
+            if (canva && canva.getContext) {
+                let ctx = canva.getContext("2d");
+
+                if (ctx) {
+                    //cuadrado1 -----------
+                    ctx.fillStyle = "yellow";//definimos colores
+                    ctx.strokeStyle = "red";
+                    ctx.lineWidth = 5;
+                    ctx.fillRect(50, 50, 100, 100);//creamos con x,y,w,h
+                    ctx.strokeRect(50,50,100,100);//margen
+
+                    //cuadrado2 -----------
+                    ctx.fillStyle = "rgb(250,250,0,0.5)";
+                    ctx.fillRect(200,50,100,100);
+                    ctx.strokeRect(200,50,100,100);
+
+                    //linea recta ----------
+                    ctx.lineWidth = 25; // definimos stilo
+                    ctx.strokeStyle = "yellow";
+                    ctx.lineCap = "round";
+                    ctx.beginPath(); //creamos la linea
+                    ctx.moveTo(350,50);
+                    ctx.lineTo(600,50);
+                    ctx.stroke();
+
+                    ctx.strokeStyle = "green";
+                    ctx.lineCap = "square";
+                    ctx.beginPath(); //creamos la linea
+                    ctx.moveTo(350,100);
+                    ctx.lineTo(600,100);
+                    ctx.stroke();
+
+                    ctx.strokeStyle = "orange";
+                    ctx.lineCap = "butt";
+                    ctx.beginPath(); //creamos la linea
+                    ctx.moveTo(350,150);
+                    ctx.lineTo(600,150);
+                    ctx.stroke();
+
+                }else{
+                    alert("No se soporta el canvas 2D");
+                }
+            }
+        };
+    </script>
+
+
+</head>
+<body>
+
+
+    <canvas id="canva" width="1000" height="600"></canvas>
+
+
+</body>
+</html>

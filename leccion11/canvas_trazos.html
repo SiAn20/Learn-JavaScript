@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Test</title>
+
+
+    <style>
+        canvas { 
+            background-color: darkblue;
+            border: solid 3px;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            let canva = document.getElementById("canva");
+
+            if (canva && canva.getContext) {
+                let ctx = canva.getContext("2d");
+
+                if (ctx) {
+                    ctx.strokeStyle = "yellow";
+                    ctx.lineWidth = 15;
+                    ctx.fillStyle = "green";
+
+                    ctx.beginPath();
+                    ctx.moveTo(50,100);
+                    ctx.lineTo(100,50);
+                    ctx.lineTo(150,50);
+                    ctx.lineTo(200,100);
+                    ctx.lineTo(200,150);
+                    ctx.lineTo(150,200);
+                    ctx.lineTo(100,200);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(300,100);
+                    ctx.lineTo(350,50);
+                    ctx.lineTo(400,50);
+                    ctx.lineTo(450,100);
+                    ctx.lineTo(450,150);
+                    ctx.lineTo(400,200);
+                    ctx.lineTo(350,200);
+                    ctx.closePath(); //une la el punto final e inicial
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(550,100);
+                    ctx.lineTo(600,50);
+                    ctx.lineTo(650,50);
+                    ctx.lineTo(700,100);
+                    ctx.lineTo(700,150);
+                    ctx.lineTo(650,200);
+                    ctx.lineTo(600,200);
+                    ctx.fill(); // añade collor dentro los trazos
+                    ctx.stroke();
+
+                }else{
+                    alert("No se soporta el canvas 2D");
+                }
+            }
+        };
+    </script>
+
+
+</head>
+<body>
+
+
+    <canvas id="canva" width="1000" height="600"></canvas>
+
+
+</body>
+</html>
