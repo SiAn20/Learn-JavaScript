@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambio de valores</title>
+</head>
+<body>
+    
+
+    <h1 id="titulo">TITULO A MANIPULAR</h1>
+    <img id="imagen" src="image1.jpg" height="300" width="300">
+    <button onclick="Mostrar()">Mostrar cambios</button>
+
+    <script>
+        function Mostrar(){
+            document.getElementById("titulo").innerHTML = "TITULO CAMBIADO!!!";
+            document.getElementById("titulo").style.color = "red";
+            document.getElementById("imagen").src = "image2.jpg"
+            document.getElementById("imagen").height = "400"
+            document.getElementById("imagen").width = "400"
+        }
+    </script>
+
+</body>
+</html>
