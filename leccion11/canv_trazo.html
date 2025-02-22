@@ -57,6 +57,22 @@
                     ctx.fill(); // añade collor dentro los trazos
                     ctx.stroke();
 
+                    //Arco n
+                    ctx.beginPath();
+                    ctx.arc(100, 500, 70, 1.1*Math.PI, 1.9*Math.PI);// ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+                    ctx.stroke();                                   // Angle = radianes y counterclockwise=true (sentido antihorario)
+
+                    //Arco u
+                    ctx.beginPath();
+                    ctx.arc(350, 500, 70, 1.1*Math.PI, 1.9*Math.PI, true); 
+                    ctx.stroke();
+
+                    //circulo o
+                    ctx.beginPath();
+                    ctx.arc(600, 500, 70, 0, 2*Math.PI);
+                    ctx.stroke();
+
+
                 }else{
                     alert("No se soporta el canvas 2D");
                 }
