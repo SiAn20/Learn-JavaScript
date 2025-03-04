@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Test Curvas </title>
+
+
+    <style>
+        canvas { 
+            background-color: darkblue;
+            border: solid yellowgreen 5px;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            let canva = document.getElementById("canva");
+
+            if (canva && canva.getContext) {
+                let ctx = canva.getContext("2d");
+
+                if (ctx) {
+                    ctx.strokeStyle = "yellow";
+                    ctx.lineWidth = 15;
+                    ctx.fillStyle = "green";
+
+                    // Estrella ---------------------------------------------------
+                    
+                    // Engranaje --------------------------------------------------
+                    // Rectangulo -------------------------------------------------
+                    
+
+
+                }else{
+                    alert("No se soporta el canvas 2D");
+                }
+            }
+        };
+    </script>
+
+
+</head>
+<body>
+
+
+    <canvas id="canva" width="1000" height="600"></canvas>
+
+
+</body>
+</html>
